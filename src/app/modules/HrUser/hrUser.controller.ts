@@ -28,6 +28,19 @@ const getUserByEmail = catchAsync(async (req: Request, res: Response) => {
     })
 })
 
+const getMe = catchAsync(async (req: Request, res: Response) => {
+
+    const { email } = req.user
+    const result = await HrUserService.getMe(email as string)
+
+    sendResponse(res, {
+        statusCode: httpStatus.OK,
+        success: true,
+        message: "profile get successfully",
+        data: result
+    })
+})
+
 const getAllHrUser = catchAsync(async (req: Request, res: Response) => {
 
     const result = await HrUserService.getAllHrUser()
@@ -42,7 +55,7 @@ const getAllHrUser = catchAsync(async (req: Request, res: Response) => {
 
 const updateHrUser = catchAsync(async (req: Request, res: Response) => {
 
-    const result = await HrUserService.updateHrUser(req.params.email as string, req.body)
+    const result = await HrUserService.updateHrUser(req.user.email as string, req.body)
 
     sendResponse(res, {
         statusCode: httpStatus.OK,
@@ -68,6 +81,7 @@ const deleteHrUser = catchAsync(async (req: Request, res: Response) => {
 export const HrUserController = {
     createHrUser,
     getUserByEmail,
+    getMe,
     getAllHrUser,
     updateHrUser,
     deleteHrUser

@@ -41,6 +41,18 @@ const getUserByEmail = async (email: string): Promise<IHRUserResponse | null> =>
     return user
 }
 
+const getMe = async (email: string): Promise<IHRUserResponse | null> => {
+    const [user] = await knex("hr_users")
+        .where('email', email)
+        .select("id", "name", "email", "created_at", "updated_at");
+
+    if (!user) {
+        throw new ApiError(HttpStatus.NOT_FOUND, "User not found");
+    }
+
+    return user
+}
+
 const getAllHrUser = async (): Promise<IHRUserResponse[]> => {
     const users = await knex("hr_users")
         .select("id", "name", "email", "created_at", "updated_at");
@@ -96,6 +108,7 @@ const deleteHrUser = async (email: string): Promise<IHRUserResponse> => {
 export const HrUserService = {
     createHrUser,
     getUserByEmail,
+    getMe,
     getAllHrUser,
     updateHrUser,
     deleteHrUser
