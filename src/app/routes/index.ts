@@ -15,7 +15,7 @@ const moduleRoutes = [
         router: HrUserRoutes
     },
     {
-        path: "/employee",
+        path: "/employees",
         router: EmployeeRoutes
     }
 ]

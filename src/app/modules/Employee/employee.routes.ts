@@ -24,6 +24,6 @@ router.patch(
     validateRequest(EmployeeValidation.updateEmployeeSchema),
     employeeController.updateEmployee
 );
-router.delete('/:id', checkAuth(), employeeController.deleteEmployee);
+router.delete('/:id', checkAuth(), employeeController.softDeleteEmployee);
 
 export const EmployeeRoutes = router;

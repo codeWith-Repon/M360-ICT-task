@@ -49,7 +49,7 @@ class EmployeeService {
     }
 
 
-    public async deleteEmployee(id: string) {
+    public async softDeleteEmployee(id: string) {
         const [deletedUser] = await this.knex("employees")
             .where({ id })
             .update({ is_deleted: true })

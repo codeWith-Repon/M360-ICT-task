@@ -63,8 +63,8 @@ class EmployeeController {
         });
     });
 
-    public deleteEmployee = catchAsync(async (req: Request, res: Response) => {
-        const result = await employeeService.deleteEmployee(req.params.id as string);
+    public softDeleteEmployee = catchAsync(async (req: Request, res: Response) => {
+        const result = await employeeService.softDeleteEmployee(req.params.id as string);
         sendResponse(res, {
             statusCode: httpStatus.OK,
             success: true,
