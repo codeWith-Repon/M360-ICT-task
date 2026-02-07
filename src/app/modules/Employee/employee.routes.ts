@@ -10,14 +10,20 @@ const router = express.Router();
 router.post(
     '/',
     checkAuth(),
-    fileUploader.upload.single('file'), 
+    fileUploader.upload.single('file'),
     validateRequest(EmployeeValidation.createEmployeeSchema),
     employeeController.createEmployee
 );
 
 router.get('/', checkAuth(), employeeController.getAllEmployees);
 router.get('/:id', checkAuth(), employeeController.getEmployeeById);
-router.patch('/:id', checkAuth(), validateRequest(EmployeeValidation.updateEmployeeSchema), employeeController.updateEmployee);
+router.patch(
+    '/:id',
+    checkAuth(),
+    fileUploader.upload.single('file'),
+    validateRequest(EmployeeValidation.updateEmployeeSchema),
+    employeeController.updateEmployee
+);
 router.delete('/:id', checkAuth(), employeeController.deleteEmployee);
 
 export const EmployeeRoutes = router;

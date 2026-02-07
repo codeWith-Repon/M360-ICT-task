@@ -47,6 +47,13 @@ class EmployeeController {
     });
 
     public updateEmployee = catchAsync(async (req: Request, res: Response) => {
+        if (req.file) {
+            const cloudinaryResponse = await fileUploader.uploadToCloudinary(req.file);
+
+            if (cloudinaryResponse) {
+                req.body.photo_path = cloudinaryResponse.secure_url
+            }
+        }
         const result = await employeeService.updateEmployee(req.params.id as string, req.body);
         sendResponse(res, {
             statusCode: httpStatus.OK,
