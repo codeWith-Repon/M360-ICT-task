@@ -1,21 +1,28 @@
 import { NextFunction, Request, Response } from "express";
 import { ObjectSchema } from "joi";
 
-export const validateRequest = (schema: ObjectSchema) =>
+export const validateRequest = (schema: ObjectSchema, source: 'body' | 'query' = 'body') =>
     async (req: Request, res: Response, next: NextFunction) => {
         try {
 
-            if (req.body.data && typeof req.body.data === 'string') {
-                req.body = JSON.parse(req.body.data);
+            let dataToValidate = source === 'query' ? req.query : req.body;
+
+            if (source === 'body' && dataToValidate.data && typeof dataToValidate.data === 'string') {
+                dataToValidate = JSON.parse(dataToValidate.data);
             }
 
-            const validatedBody = await schema.validateAsync(req.body, {
+            const validatedData = await schema.validateAsync(dataToValidate, {
                 abortEarly: false, //show all errors
                 allowUnknown: true, //allow unknown fields
                 stripUnknown: true, //remove unknown fields
             });
 
-            req.body = validatedBody;
+            if (source === 'query') {
+                Object.keys(req.query).forEach(key => delete req.query[key]);
+                Object.assign(req.query, validatedData);
+            } else {
+                req.body = validatedData;
+            }
 
             next();
         } catch (error) {
