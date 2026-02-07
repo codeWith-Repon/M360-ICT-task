@@ -2,6 +2,7 @@ import { Server } from 'http';
 import app from './app';
 import config from './config';
 import { getKnex } from './config/knex';
+import { seedInitialHrUser } from './shared/seedHrAdmin';
 
 async function bootstrap() {
     let server: Server;
@@ -11,6 +12,8 @@ async function bootstrap() {
         const db = getKnex();
         await db.raw('SELECT 1');
         console.log('✅ Database connection successful');
+
+        await seedInitialHrUser();
 
         server = app.listen(config.port, () => {
             console.log(`🚀 Server is running on http://localhost:${config.port}`);

@@ -9,6 +9,9 @@ export default {
 
     dbUrl: process.env.DATABASE_URL,
 
+    hrAdmin: process.env.HR_ADMIN_EMAIL,
+    hrAdminPassword: process.env.HR_ADMIN_PASSWORD,
+
     jwt: {
         secret: process.env.JWT_SECRET,
         expiresIn: process.env.JWT_EXPIRES_IN,
