@@ -1,0 +1,751 @@
+{
+  "info": {
+    "_postman_id": "aa4b6b7b-8b1b-4e7d-ac42-43c736ca97e9",
+    "name": "M 360 It",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "33984711"
+  },
+  "item": [
+    {
+      "name": "HR",
+      "item": [
+        {
+          "name": "create Hr user",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGFjYTc0NWM2ZjhkMjI4OGI2MjFmYjAiLCJlbWFpbCI6InJlcG9uNzI1M0BnbWFpbC5jb20iLCJyb2xlIjoiUklERVIiLCJpYXQiOjE3NTYxNzU1NTksImV4cCI6MTc1NjI2MTk1OX0.qUkzesvnziUiEE2gBcJP9kZWE5E3WQIRCerI9y3liG0",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"admin22\",\r\n    \"email\": \"admin122@gmail.com\",\r\n    \"password\": \"243456\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{port}}/api/v1/hr/create",
+              "host": [
+                "{{port}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "create"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete user by email",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGFjYTc0NWM2ZjhkMjI4OGI2MjFmYjAiLCJlbWFpbCI6InJlcG9uNzI1M0BnbWFpbC5jb20iLCJyb2xlIjoiUklERVIiLCJpYXQiOjE3NTYxNzU1NTksImV4cCI6MTc1NjI2MTk1OX0.qUkzesvnziUiEE2gBcJP9kZWE5E3WQIRCerI9y3liG0",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"repon\",\r\n    \"email\": \"rde@gmail.com\",\r\n    \"password\": \"2434\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{port}}/api/v1/hr/admin122@gmail.com",
+              "host": [
+                "{{port}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "admin122@gmail.com"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get hr by email",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGFjYTc0NWM2ZjhkMjI4OGI2MjFmYjAiLCJlbWFpbCI6InJlcG9uNzI1M0BnbWFpbC5jb20iLCJyb2xlIjoiUklERVIiLCJpYXQiOjE3NTYxNzU1NTksImV4cCI6MTc1NjI2MTk1OX0.qUkzesvnziUiEE2gBcJP9kZWE5E3WQIRCerI9y3liG0",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"repon\",\r\n    \"email\": \"rde@gmail.com\",\r\n    \"password\": \"2434\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{port}}/api/v1/hr/admin122@gmail.com",
+              "host": [
+                "{{port}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "admin122@gmail.com"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get me",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGFjYTc0NWM2ZjhkMjI4OGI2MjFmYjAiLCJlbWFpbCI6InJlcG9uNzI1M0BnbWFpbC5jb20iLCJyb2xlIjoiUklERVIiLCJpYXQiOjE3NTYxNzU1NTksImV4cCI6MTc1NjI2MTk1OX0.qUkzesvnziUiEE2gBcJP9kZWE5E3WQIRCerI9y3liG0",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"repon\",\r\n    \"email\": \"rde@gmail.com\",\r\n    \"password\": \"2434\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{port}}/api/v1/hr/me",
+              "host": [
+                "{{port}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                "me"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get all hr",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjgsImVtYWlsIjoiZDFkZWRAZ21haWwuY29tIiwiaWF0IjoxNzcwNDAwNTg4LCJleHAiOjE3NzEwMDUzODh9.xGXW5Rf39cB2-pmkAqTFIMdKXbZKnSoVszLvw-uc-Ak",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"repon\",\r\n    \"email\": \"rde@gmail.com\",\r\n    \"password\": \"2434\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{port}}/api/v1/hr/",
+              "host": [
+                "{{port}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "hr",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update Hr",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGFjYTc0NWM2ZjhkMjI4OGI2MjFmYjAiLCJlbWFpbCI6InJlcG9uNzI1M0BnbWFpbC5jb20iLCJyb2xlIjoiUklERVIiLCJpYXQiOjE3NTYxNzU1NTksImV4cCI6MTc1NjI2MTk1OX0.qUkzesvnziUiEE2gBcJP9kZWE5E3WQIRCerI9y3liG0",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    // \"name\": \"ren\"\r\n    // \"email\": \"u1@gmail.com\"\r\n    \"password\": \"123456\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{port}}/api/v1/hr",
+              "host": [
+                "{{port}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "hr"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "Login",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGFjYTc0NWM2ZjhkMjI4OGI2MjFmYjAiLCJlbWFpbCI6InJlcG9uNzI1M0BnbWFpbC5jb20iLCJyb2xlIjoiUklERVIiLCJpYXQiOjE3NTYxNzU1NTksImV4cCI6MTc1NjI2MTk1OX0.qUkzesvnziUiEE2gBcJP9kZWE5E3WQIRCerI9y3liG0",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"hradmin@360ict.com\",\r\n    \"password\": \"123456\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{port}}/api/v1/auth/login",
+              "host": [
+                "{{port}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "auth",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Log out user",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGFjYTc0NWM2ZjhkMjI4OGI2MjFmYjAiLCJlbWFpbCI6InJlcG9uNzI1M0BnbWFpbC5jb20iLCJyb2xlIjoiUklERVIiLCJpYXQiOjE3NTYxNzU1NTksImV4cCI6MTc1NjI2MTk1OX0.qUkzesvnziUiEE2gBcJP9kZWE5E3WQIRCerI9y3liG0",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{port}}/api/v1/auth/logout",
+              "host": [
+                "{{port}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "auth",
+                "logout"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Employee",
+      "item": [
+        {
+          "name": "create employee",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGFjYTc0NWM2ZjhkMjI4OGI2MjFmYjAiLCJlbWFpbCI6InJlcG9uNzI1M0BnbWFpbC5jb20iLCJyb2xlIjoiUklERVIiLCJpYXQiOjE3NTYxNzU1NTksImV4cCI6MTc1NjI2MTk1OX0.qUkzesvnziUiEE2gBcJP9kZWE5E3WQIRCerI9y3liG0",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "data",
+                  "value": "{\n    \"name\": \"ffrg\",\n    \"age\": 28,\n    \"designation\": \"Software Engineer\",\n    \"hiring_date\": \"2023-05-10\",\n    \"date_of_birth\": \"1996-08-15\",\n    \"salary\": 65000.00\n}",
+                  "type": "text",
+                  "uuid": "ba503040-d259-465b-855e-52578691020c"
+                },
+                {
+                  "key": "file",
+                  "type": "file",
+                  "uuid": "53033135-77fe-4e63-baf6-fa02733300a8",
+                  "src": "/C:/Users/repon/Downloads/1.jpg",
+                  "disabled": true
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{port}}/api/v1/employees",
+              "host": [
+                "{{port}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "employees"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get all employee",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{port}}/api/v1/employees",
+              "host": [
+                "{{port}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "employees"
+              ],
+              "query": [
+                {
+                  "key": "search",
+                  "value": "Arifd",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "page",
+                  "value": "2",
+                  "disabled": true
+                },
+                {
+                  "key": "limit",
+                  "value": "1",
+                  "disabled": true
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get employee by id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{port}}/api/v1/employees/6",
+              "host": [
+                "{{port}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "employees",
+                "6"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update employee by id",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "data",
+                  "value": "{\n    \"name\": \"Khalisi\"\n}",
+                  "type": "text",
+                  "uuid": "df292efb-76da-4a48-a626-82699966f92d"
+                },
+                {
+                  "key": "file",
+                  "type": "file",
+                  "uuid": "8cbc9c8b-f211-482d-a61a-59564004a45b",
+                  "src": "/C:/Users/repon/Downloads/2.jpg"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{port}}/api/v1/employees/6",
+              "host": [
+                "{{port}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "employees",
+                "6"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Soft delete employee by id",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Arifd Hossain\",\r\n    \"salary\": 1243\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{port}}/api/v1/employees/2",
+              "host": [
+                "{{port}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "employees",
+                "2"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Attendance",
+      "item": [
+        {
+          "name": "record attendance",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGFjYTc0NWM2ZjhkMjI4OGI2MjFmYjAiLCJlbWFpbCI6InJlcG9uNzI1M0BnbWFpbC5jb20iLCJyb2xlIjoiUklERVIiLCJpYXQiOjE3NTYxNzU1NTksImV4cCI6MTc1NjI2MTk1OX0.qUkzesvnziUiEE2gBcJP9kZWE5E3WQIRCerI9y3liG0",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"employee_id\": 9,\r\n    \"date\": \"2026-02-08\",\r\n    \"check_in_time\": \"14:30:45\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{port}}/api/v1/attendance",
+              "host": [
+                "{{port}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "attendance"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get all attendance",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGFjYTc0NWM2ZjhkMjI4OGI2MjFmYjAiLCJlbWFpbCI6InJlcG9uNzI1M0BnbWFpbC5jb20iLCJyb2xlIjoiUklERVIiLCJpYXQiOjE3NTYxNzU1NTksImV4cCI6MTc1NjI2MTk1OX0.qUkzesvnziUiEE2gBcJP9kZWE5E3WQIRCerI9y3liG0",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"employee_id\": 4,\r\n    \"date\": \"2026-02-08\",\r\n    \"check_in_time\": \"14:30:45\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{port}}/api/v1/attendance?to=2026-02-10&from=2026-02-08",
+              "host": [
+                "{{port}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "attendance"
+              ],
+              "query": [
+                {
+                  "key": "employee_id",
+                  "value": "2",
+                  "disabled": true
+                },
+                {
+                  "key": "to",
+                  "value": "2026-02-10"
+                },
+                {
+                  "key": "from",
+                  "value": "2026-02-08"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get attendance  by id",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGFjYTc0NWM2ZjhkMjI4OGI2MjFmYjAiLCJlbWFpbCI6InJlcG9uNzI1M0BnbWFpbC5jb20iLCJyb2xlIjoiUklERVIiLCJpYXQiOjE3NTYxNzU1NTksImV4cCI6MTc1NjI2MTk1OX0.qUkzesvnziUiEE2gBcJP9kZWE5E3WQIRCerI9y3liG0",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"employee_id\": 4,\r\n    \"date\": \"2026-02-08\",\r\n    \"check_in_time\": \"14:30:45\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{port}}/api/v1/attendance/1",
+              "host": [
+                "{{port}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "attendance",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update attendance  by id",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGFjYTc0NWM2ZjhkMjI4OGI2MjFmYjAiLCJlbWFpbCI6InJlcG9uNzI1M0BnbWFpbC5jb20iLCJyb2xlIjoiUklERVIiLCJpYXQiOjE3NTYxNzU1NTksImV4cCI6MTc1NjI2MTk1OX0.qUkzesvnziUiEE2gBcJP9kZWE5E3WQIRCerI9y3liG0",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"employee_id\": 1\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{port}}/api/v1/attendance/1",
+              "host": [
+                "{{port}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "attendance",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete attendance  by id",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGFjYTc0NWM2ZjhkMjI4OGI2MjFmYjAiLCJlbWFpbCI6InJlcG9uNzI1M0BnbWFpbC5jb20iLCJyb2xlIjoiUklERVIiLCJpYXQiOjE3NTYxNzU1NTksImV4cCI6MTc1NjI2MTk1OX0.qUkzesvnziUiEE2gBcJP9kZWE5E3WQIRCerI9y3liG0",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"employee_id\": 1\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{port}}/api/v1/attendance/2",
+              "host": [
+                "{{port}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "attendance",
+                "2"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "report",
+      "item": [
+        {
+          "name": "get monthly attendance report",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{port}}/api/v1/reports/attendance?month=2026-02",
+              "host": [
+                "{{port}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "reports",
+                "attendance"
+              ],
+              "query": [
+                {
+                  "key": "month",
+                  "value": "2026-02"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
